@@ -1,0 +1,123 @@
+<!DOCTYPE html> <html><head>
+        <title>Unit 5 Project</title>
+    <style>body {
+    color: white;
+    font-size: 20px;
+    font-style: italic;
+    background-color: #0F6D2E;
+    font-family: "Times New Roman", Times, serif;
+}
+
+h4 {
+    text-align: center;
+}
+
+h1{
+	text-align: center;
+}
+
+p {
+    color: white;
+    font-size: 15px;
+    font-style: italic;
+    font-weight: bold;
+    font-family: "Times New Roman", Times, serif;
+}
+
+.cover {
+    height: 230px;
+    width: 250px;
+    border: 1px solid white;
+    margin: 13px;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.Q1 {
+    display: flex;
+    justify-content: center;
+}
+
+.Q2 {
+    display: flex;
+    justify-content: center;
+}
+
+.Q3 {
+    display: flex;
+    justify-content: center;
+}
+
+.end {
+    display: flex;
+    justify-content: center;
+}
+
+button {
+    border: 1px solid white;
+    margin: 15px;
+    background-color: #0F6D2E;
+}</style></head>
+    <body>
+        <div class="title">
+            <h1>Are you a soldier, poet, or king?</h1>
+            <img class="cover" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQKB3jVXDqdeziYEti-BokhNNN8zH0oUBV32lWGj91PtNBYeUb61UWk7usAjpRjr0BnmQQ&amp;usqp=CAU">
+        </div>
+
+        <div>
+            <h4>Is duty an excuse, violence, or straightfoward?</h4>
+
+            <div class="Q1">
+                <input class="Q1Input" placeholder="Type your answer here">
+            </div>
+        </div>
+
+        <div>
+            <h4>If you were to hold a Crown would it be covered in blood of the guilty, one of the innocents, or your own blood?</h4>
+
+            <div class="Q2">
+                <input class="Q2Input" placeholder="Type your answer here">
+            </div>
+        </div>
+
+        <div>
+            <h4>Does the throne look like something to be destroyed, right at you, or is it golden and covered in flowers?</h4>
+
+            <div class="Q3">
+                <input class="Q3Input" placeholder="Type your answer here">
+                <div class="Q3-message"></div>
+            </div>
+        </div>
+
+        <div class="end">
+            <button class="submit">
+                <p>Submit</p>
+            </button>
+        </div>
+
+    
+<script>
+/*__POPCODESTART__*/
+var Q1Input = document.querySelector(".Q1Input").value;
+var Q2Input = document.querySelector(".Q2Input").value;
+var Q3Input = document.querySelector(".Q3Input").value;
+var results = document.querySelector(".results");
+var result1 = document.querySelector(".soldier");
+var result2 = document.querySelector(".poet");
+var result3 = document.querySelector(".king");
+var submitButton = document.querySelector(".submit");
+
+submitButton.onclick = function () {
+  if (Q1Input === "an excuse" && Q2Input === "the guilty" && Q3Input === "something to be destroyed") {
+    results.style.display = "block";
+    results.innerHTML = "You are a" + result3 + "!";
+  } else if (Q1Input === "violence" && Q2Input === "one of the innocents" && Q3Input === "right at me") {
+    results.style.display = "block";
+    results.innerHTML = "You are a" + result2 + "!";
+  } else if (Q1Input === "straightfoward" && Q2Input === "my blood" && Q3Input === "golden and covered in flowers") {
+    results.style.display = "block";
+    results.innerHTML = "You are a" + result1 + "!";
+  }
+};
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInBvcGNvZGVQcmV2aWV3LmpzIl0sIm5hbWVzIjpbIlExSW5wdXQiLCJkb2N1bWVudCIsInF1ZXJ5U2VsZWN0b3IiLCJ2YWx1ZSIsIlEySW5wdXQiLCJRM0lucHV0IiwicmVzdWx0cyIsInJlc3VsdDEiLCJyZXN1bHQyIiwicmVzdWx0MyIsInN1Ym1pdEJ1dHRvbiIsIm9uY2xpY2siLCJzdHlsZSIsImRpc3BsYXkiLCJpbm5lckhUTUwiXSwibWFwcGluZ3MiOiJBQUFBLElBQUlBLE9BQU8sR0FBR0MsUUFBUSxDQUFDQyxhQUFULENBQXVCLFVBQXZCLEVBQW1DQyxLQUFqRDtBQUNBLElBQUlDLE9BQU8sR0FBR0gsUUFBUSxDQUFDQyxhQUFULENBQXVCLFVBQXZCLEVBQW1DQyxLQUFqRDtBQUNBLElBQUlFLE9BQU8sR0FBR0osUUFBUSxDQUFDQyxhQUFULENBQXVCLFVBQXZCLEVBQW1DQyxLQUFqRDtBQUNBLElBQUlHLE9BQU8sR0FBR0wsUUFBUSxDQUFDQyxhQUFULENBQXVCLFVBQXZCLENBQWQ7QUFDQSxJQUFJSyxPQUFPLEdBQUdOLFFBQVEsQ0FBQ0MsYUFBVCxDQUF1QixVQUF2QixDQUFkO0FBQ0EsSUFBSU0sT0FBTyxHQUFHUCxRQUFRLENBQUNDLGFBQVQsQ0FBdUIsT0FBdkIsQ0FBZDtBQUNBLElBQUlPLE9BQU8sR0FBR1IsUUFBUSxDQUFDQyxhQUFULENBQXVCLE9BQXZCLENBQWQ7QUFFQSxJQUFJUSxZQUFZLEdBQUdULFFBQVEsQ0FBQ0MsYUFBVCxDQUF1QixTQUF2QixDQUFuQjs7QUFDQVEsWUFBWSxDQUFDQyxPQUFiLEdBQXFCLFlBQVU7QUFFL0IsTUFBS1gsT0FBTyxLQUFLLFdBQWIsSUFBOEJJLE9BQU8sS0FBSyxZQUExQyxJQUE0REMsT0FBTyxLQUFLLDJCQUE1RSxFQUEwRztBQUN0R0MsSUFBQUEsT0FBTyxDQUFDTSxLQUFSLENBQWNDLE9BQWQsR0FBc0IsT0FBdEI7QUFDQVAsSUFBQUEsT0FBTyxDQUFDUSxTQUFSLEdBQW9CLGNBQWFMLE9BQWIsR0FBc0IsR0FBMUM7QUFFSCxHQUpELE1BSU8sSUFBS1QsT0FBTyxLQUFLLFVBQWIsSUFBNkJJLE9BQU8sS0FBSyxzQkFBekMsSUFBcUVDLE9BQU8sS0FBSyxhQUFyRixFQUFxRztBQUN4R0MsSUFBQUEsT0FBTyxDQUFDTSxLQUFSLENBQWNDLE9BQWQsR0FBc0IsT0FBdEI7QUFDQVAsSUFBQUEsT0FBTyxDQUFDUSxTQUFSLEdBQW9CLGNBQWFOLE9BQWIsR0FBc0IsR0FBMUM7QUFFSCxHQUpNLE1BSUEsSUFBS1IsT0FBTyxLQUFLLGdCQUFiLElBQW1DSSxPQUFPLEtBQUssVUFBL0MsSUFBK0RDLE9BQU8sS0FBSywrQkFBL0UsRUFBaUg7QUFDcEhDLElBQUFBLE9BQU8sQ0FBQ00sS0FBUixDQUFjQyxPQUFkLEdBQXNCLE9BQXRCO0FBQ0FQLElBQUFBLE9BQU8sQ0FBQ1EsU0FBUixHQUFvQixjQUFhUCxPQUFiLEdBQXNCLEdBQTFDO0FBQ0g7QUFDQSxDQWREIiwic291cmNlc0NvbnRlbnQiOlsibGV0IFExSW5wdXQgPSBkb2N1bWVudC5xdWVyeVNlbGVjdG9yKFwiLlExSW5wdXRcIikudmFsdWU7XG5sZXQgUTJJbnB1dCA9IGRvY3VtZW50LnF1ZXJ5U2VsZWN0b3IoXCIuUTJJbnB1dFwiKS52YWx1ZTtcbmxldCBRM0lucHV0ID0gZG9jdW1lbnQucXVlcnlTZWxlY3RvcihcIi5RM0lucHV0XCIpLnZhbHVlO1xubGV0IHJlc3VsdHMgPSBkb2N1bWVudC5xdWVyeVNlbGVjdG9yKFwiLnJlc3VsdHNcIik7XG5sZXQgcmVzdWx0MSA9IGRvY3VtZW50LnF1ZXJ5U2VsZWN0b3IoXCIuc29sZGllclwiKTtcbmxldCByZXN1bHQyID0gZG9jdW1lbnQucXVlcnlTZWxlY3RvcihcIi5wb2V0XCIpO1xubGV0IHJlc3VsdDMgPSBkb2N1bWVudC5xdWVyeVNlbGVjdG9yKFwiLmtpbmdcIik7XG5cbmxldCBzdWJtaXRCdXR0b24gPSBkb2N1bWVudC5xdWVyeVNlbGVjdG9yKFwiLnN1Ym1pdFwiKTtcbnN1Ym1pdEJ1dHRvbi5vbmNsaWNrPWZ1bmN0aW9uKCl7XG4gICAgXG5pZiAoKFExSW5wdXQgPT09IFwiYW4gZXhjdXNlXCIpICYmIChRMklucHV0ID09PSBcInRoZSBndWlsdHlcIikgJiYgKFEzSW5wdXQgPT09IFwic29tZXRoaW5nIHRvIGJlIGRlc3Ryb3llZFwiKSkge1xuICAgIHJlc3VsdHMuc3R5bGUuZGlzcGxheT1cImJsb2NrXCI7XG4gICAgcmVzdWx0cy5pbm5lckhUTUwgPSBcIllvdSBhcmUgYVwiICtyZXN1bHQzKyBcIiFcIjtcbiAgICBcbn0gZWxzZSBpZiAoKFExSW5wdXQgPT09IFwidmlvbGVuY2VcIikgJiYgKFEySW5wdXQgPT09IFwib25lIG9mIHRoZSBpbm5vY2VudHNcIikgJiYgKFEzSW5wdXQgPT09IFwicmlnaHQgYXQgbWVcIikpIHtcbiAgICByZXN1bHRzLnN0eWxlLmRpc3BsYXk9XCJibG9ja1wiO1xuICAgIHJlc3VsdHMuaW5uZXJIVE1MID0gXCJZb3UgYXJlIGFcIiArcmVzdWx0MisgXCIhXCI7XG4gICAgXG59IGVsc2UgaWYgKChRMUlucHV0ID09PSBcInN0cmFpZ2h0Zm93YXJkXCIpICYmIChRMklucHV0ID09PSBcIm15IGJsb29kXCIpICYmIChRM0lucHV0ID09PSBcImdvbGRlbiBhbmQgY292ZXJlZCBpbiBmbG93ZXJzXCIpKSB7XG4gICAgcmVzdWx0cy5zdHlsZS5kaXNwbGF5PVwiYmxvY2tcIjtcbiAgICByZXN1bHRzLmlubmVySFRNTCA9IFwiWW91IGFyZSBhXCIgK3Jlc3VsdDErIFwiIVwiO1xufVxufTsiXX0=</script></body></html>
